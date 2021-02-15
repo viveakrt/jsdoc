@@ -12,14 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build
-        uses: andstor/jsdoc-action@v1
-        with:
-          source_dir: ./src
-          output_dir: ./out
-          config_file: conf.json
-          template: minami
-          front_page: README.md
+      - name: JSDoc Action
+        uses: andstor/jsdoc-action@v1.2.0
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
